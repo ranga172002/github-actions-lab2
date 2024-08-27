@@ -6,12 +6,12 @@ jobs:
   build:
     runs-on: '${{ martix.os }}'
     strategy:
-       martix:
-         os:
+      matrix:
+        os:
           - ubuntu-latest
           - macos-12
           - windows-latest
-         py-version:
+        py-version:
             - 3.7
             - 3.8
             - 3.9
